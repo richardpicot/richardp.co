@@ -1,52 +1,137 @@
 /* =================================
-  Base Element Styles
+  #Reset & Basics
 ==================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 * {
 	box-sizing: border-box;
 }
 
+/* =================================
+  #Basic Styles
+==================================== */
+
 body {
-  font-family: 'Work Sans', sans-serif;
+	background: #fff;
+	font-family: 'Work Sans', sans-serif;
   font-size: 16px;
-	color: #333333;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+  /* -webkit-text-size-adjust: 100%; }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #000;
+      color: #F0F0F0; } } */
+}
+
+/* =================================
+  #Typography
+==================================== */
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 800;
+	margin-bottom: 16px;
 }
 
 h1 {
-  font-weight: 800;
-  font-size: 3em;
-  line-height: 1.1em;
+	font-size: 4em;
+  line-height: 1.1;
   letter-spacing: -0.02em;
-	margin: 0;
 }
 
 h2 {
-	font-size: 2em;
+	font-size: 3em;
+	line-height: 1.5;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 2em;
+	line-height: 1.5;
 	margin-top: 1em;
-	margin-bottom: 0;
 }
 
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+h4 {
+	font-size: 1.5em;
+	line-height: 1.5;
+}
+
+h5 {
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+h6 {
+	font-size: 1em;
+	line-height: 1.5;
 }
 
 p {
-  font-size: 1em;
-	line-height: 1.4em;
+	margin: 0 0 30px 0;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: 700;
+}
+
+/* =================================
+  #Links
+==================================== */
+
+a {
+	text-decoration: none;
 }
 
 a:visited {
 	color: inherit;
-}
-
-a {
-	text-decoration: none;
 }
 
 p a {
@@ -59,7 +144,6 @@ p a:hover {
   border-bottom: 2px solid rgba(59,103,246,1);
 }
 
-
 .subheading {
 	font-size: 1.25em;
 	font-weight: 500;
@@ -69,10 +153,45 @@ p a:hover {
 }
 
 /* =================================
-  Base Layout Styles
+  Page Layout Styles
 ==================================== */
+.page-wrapper {
+  width: 90%;
+  margin: auto;
+}
 
-/* --- Navigation --- */
+img {
+  width: 100%;
+}
+
+#homepage-intro {
+  margin: 128px 0;
+}
+
+#work a {
+	display: block;
+}
+
+#work a:hover, .project:hover {
+	color: #3B67F6;
+}
+
+/* .project:hover img {
+	transform: scale(1.04, 1.04);
+
+} */
+
+.project {
+	margin-bottom: 64px;
+	overflow: hidden;
+}
+
+.grow {transition: all .2s ease-in-out;}
+.grow:hover {transform: scale(1.1);}
+
+/* =================================
+  Navigation
+==================================== */
 .main-header {
   display: flex;
   flex-direction: column;
@@ -84,10 +203,6 @@ p a:hover {
   justify-content: space-around;
   margin-top: 1em;
 }
-
-
-
-/* --- Page elements --- */
 
 .site-name {
   color: #0D0D1E;
@@ -108,29 +223,6 @@ p a:hover {
 .nav a:hover {
   color: rgba(13,13,30,1);
   font-weight: 500;
-}
-
-/* --- Layout containers --- */
-
-.container {
-  width: 90%;
-  margin: auto;
-}
-
-img {
-  width: 100%;
-}
-
-#homepage-intro {
-  margin: 128px 0;
-}
-
-.project {
-	margin-bottom: 64px;
-}
-
-.project:hover {
-	border: 1px solid red;
 }
 
 /* =================================
