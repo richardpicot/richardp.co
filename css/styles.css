@@ -90,7 +90,6 @@ h2 {
 h3 {
 	font-size: 2em;
 	line-height: 1.5;
-	/* margin-top: 1em; */
 }
 
 h4 {
@@ -142,29 +141,29 @@ a:visited {
 
 .nav a {
   font-weight: 400;
-  color: rgba(13,13,30,0.5);
+  color: #8E8E93;
   text-decoration: none;
 }
 
 .nav a:hover {
-  color: #622aff;
+  color: #5856D6;
   font-weight: 500;
 	transition: .2s;
 }
 
 p a:link {
 	color: inherit;
-	border-bottom: 1px solid #622aff;
+	border-bottom: 1px solid #5856D6;
 }
 
 p a:hover {
-	color: #622aff;
+	color: #5856D6;
 	border-bottom: none;
 	transition: .2s;
 }
 
 .project:hover .project-description {
-	color: #622aff;
+	color: #5856D6;
 }
 
 .project:hover img {
@@ -173,7 +172,7 @@ p a:hover {
 }
 
 /* =================================
-  Page Layout Styles
+  #Page Layout Styles
 ==================================== */
 .page-wrapper {
   width: 90%;
@@ -199,7 +198,7 @@ img {
 }
 
 /* =================================
-  Navigation
+  #Navigation
 ==================================== */
 .main-header {
   display: flex;
@@ -210,7 +209,7 @@ img {
 .nav {
   display: flex;
   justify-content: space-around;
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .site-name {
@@ -221,6 +220,22 @@ img {
   display: block;
   align-self: center;
   border-bottom: none;
+}
+
+/* =================================
+  #Footer
+==================================== */
+
+footer {
+	margin-top: 64px;
+	margin-bottom: 48px;
+	padding-top: 64px;
+	border-top: 1px solid #E5E5EA;
+	text-align: center;
+}
+
+footer .nav {
+	margin-top: 48px;
 }
 
 /* =================================
