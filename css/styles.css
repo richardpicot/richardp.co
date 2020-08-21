@@ -61,8 +61,8 @@ table {
 :root {
   --primary-color: #5758FF;
   --text-primary-color: #333333;
-  --text-secondary-color: rgba(60, 60, 67, 0.6);
-  --text-tertiary-color: rgba(119, 119, 119, 0.4);
+  --text-secondary-color: rgba(60, 60, 67, 0.8);
+  --text-tertiary-color: rgba(60, 60, 67, 0.6);
   --foreground-color-02: #E5E5EA;
   --foreground-color-01: #F6F6F9;
   --main-background-color: #ffffff;
@@ -74,7 +74,7 @@ table {
     --primary-color: #9797FF;
     --text-primary-color: #F0F0F0;
     --text-secondary-color: rgba(240, 240, 240, 0.6);
-    --text-tertiary-color: rgba(240, 240, 240, 0.4);
+    --text-tertiary-color: rgba(240, 240, 240, 0.6);
     --foreground-color-02: #2E2E2E;
     --foreground-color-01: #1F1F1F;
     --main-background-color: #121212;
@@ -137,7 +137,7 @@ strong {
   font-weight: 700;
 }
 
-/* Case study typography styles */
+/* ------- CASE STUDY TYPOGRAPHY STYLES -------- */
 
 .pre-text {
   text-transform: uppercase;
@@ -185,6 +185,10 @@ figcaption {
 	margin: 64px 0;
 }
 
+.property {
+	color: var(--text-secondary-color);
+}
+
 .property p {
 	font-size: 0.875em;
 	margin: 0 0 16px 0;
@@ -198,12 +202,12 @@ a {
 }
 
 a:visited {
-  color: inherit;
+	color: inherit;
 }
 
 .nav a {
   font-weight: 500;
-  color: var(--text-secondary-color);
+  color: var(--text-tertiary-color);
   text-decoration: none;
 }
 
@@ -212,12 +216,13 @@ a:visited {
   transition: .2s;
 }
 
-p a:link {
-  color: var(--primary-color);
+p a:link, .constrain a:visited {
+	border-bottom: 1px solid var(--primary-color);
 }
+/* Any link that is within the main text area of a case study but not including those on home page */
 
 p a:hover {
-  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .project:hover .project-description {
@@ -275,7 +280,7 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Case study layout styles */
+/* ------- CASE STUDY LAYOUT STYLES -------- */
 section {
   margin-top: 48px;
 }
@@ -286,7 +291,6 @@ figure {
 }
 
 .case-study-intro {
-  border-bottom: 1px solid var(--foreground-color-02);
 	padding-bottom: 32px;
 }
 
@@ -338,7 +342,7 @@ figure {
 ==================================== */
 footer {
   margin-top: 128px;
-  margin-bottom: 48px;
+  margin-bottom: 64px;
   padding-top: 64px;
   border-top: 1px solid var(--foreground-color-02);
   text-align: center;
@@ -353,7 +357,7 @@ footer .nav {
 ==================================== */
 @media (min-width: 769px) {
 
-  /* Layout adjustments */
+  /* ------ Layout adjustments ------ */
   .page-wrapper {
     max-width: 980px;
   }
@@ -372,7 +376,7 @@ footer .nav {
     align-self: center;
   }
 
-  .nav li {
+  .nav a {
     margin-left: 3em;
   }
 
@@ -388,7 +392,40 @@ footer .nav {
     margin-bottom: 0;
   }
 
-  /* Styling adjustments */
+	/* CASE STUDY */
+
+	.case-study-title {
+		margin: 96px 0;
+		text-align: center;
+	}
+
+.case-study-intro {
+	display: flex;
+	padding-bottom: 32px;
+	border: none;
+}
+
+	.credits-and-role {
+		order: 2;
+		flex-grow: 2;
+		margin-left: 32px;
+		padding-top: 10px;
+	}
+
+	.intro-text {
+		order: 1;
+		flex-grow: 1:
+	}
+
+/* Apply this div class to elements that need a max width for good line length */
+	.constrain {
+		max-width: 760px;
+		margin: auto;
+	}
+
+
+
+  /* ------- Styling adjustments -------- */
   .hero {
     font-size: 6em;
   }
@@ -405,12 +442,24 @@ footer .nav {
     font-size: 1.5em;
   }
 
-  p {
+  p, li {
     font-size: 1.125em;
     line-height: 1.7;
   }
 
+blockquote {
+	font-size: 2em;
+}
+
   footer {
-    margin-top: 256px;
+    margin: 200px 0 96px 0;
+		padding-top: 96px;
   }
+
+	footer .nav {
+		margin-top: 80px;
+	}
+
+
+
 }
