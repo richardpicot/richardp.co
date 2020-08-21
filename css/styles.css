@@ -14,141 +14,191 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
+
+/* ul, ol {
 	list-style: none;
-}
+} */
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* =================================
   #Basic Styles
 ==================================== */
-
 /* Light mode variables */
 :root {
-	--primary-color: #5758FF;
-	--text-primary-color: #333333;
-	--text-secondary-color: rgba(60,60,67,0.6);
-	--text-tertiary-color: rgba(119,119,119,0.4);
-	--foreground-color: #E5E5EA;
-	--main-background-color: #ffffff;
+  --primary-color: #5758FF;
+  --text-primary-color: #333333;
+  --text-secondary-color: rgba(60, 60, 67, 0.6);
+  --text-tertiary-color: rgba(119, 119, 119, 0.4);
+  --foreground-color-02: #E5E5EA;
+  --foreground-color-01: #F6F6F9;
+  --main-background-color: #ffffff;
 }
 
 /* Dark mode variables */
 @media (prefers-color-scheme: dark) {
   :root {
-		--primary-color: #9797FF;
-		--text-primary-color: #F0F0F0;
-		--text-secondary-color: rgba(240,240,240,0.6);
-		--text-tertiary-color: rgba(240,240,240,0.4);
-		--foreground-color: #2E2E2E;
-		--main-background-color: #121212;
-	}
+    --primary-color: #9797FF;
+    --text-primary-color: #F0F0F0;
+    --text-secondary-color: rgba(240, 240, 240, 0.6);
+    --text-tertiary-color: rgba(240, 240, 240, 0.4);
+    --foreground-color-02: #2E2E2E;
+    --foreground-color-01: #1F1F1F;
+    --main-background-color: #121212;
+  }
 }
 
-
 body {
-	background: var(--main-background-color);
-	font-family: 'Work Sans', sans-serif;
+  background: var(--main-background-color);
+  font-family: 'Work Sans', sans-serif;
   font-size: 16px;
-	color: var(--text-primary-color);
-	-webkit-font-smoothing: antialiased;
+  color: var(--text-primary-color);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* =================================
   #Typography
 ==================================== */
-
 h1, h2, h3 {
-	margin-top: 0;
-	margin-bottom: 16px;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
+.hero {
+  font-size: 4em;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
 
 h1 {
-	font-size: 4em;
-	font-weight: 800;
+  font-size: 2em;
+  font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 h2 {
-	font-size: 2em;
-	font-weight: 800;
-	line-height: 1.1;
-	margin-top: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 h3 {
-	font-size: 1.5em;
-	font-weight: 600;
-	line-height: 1.2;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 p {
-	margin-bottom: 1em;
-	font-size: 1em;
-	line-height: 1.7;
+  margin: 0 0 32px 0;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 em {
-	font-style: italic;
+  font-style: italic;
 }
 
 strong {
-	font-weight: 700;
+  font-weight: 700;
 }
 
-.subheading {
-	font-size: 1.5em;
-	font-weight: 700;
-	line-height: 1.3em;
-	margin-bottom: 32px;
+/* Case study typography styles */
+
+.pre-text {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
 }
 
-.subtitle {
-	line-height: 1.5em;
+blockquote {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.4;
+	color: var(--primary-color);
+  display: inline-block;
+  margin: 32px;
+	text-align: center;
+	font-style: italic;
+}
+
+ol, ul {
+  margin: 24px 0;
+}
+
+li {
+  margin: 1.5em 0;
+  line-height: 1.4em;
+  margin-left: 24px;
+  color: var(--primary-color);
+}
+
+li span {
+  color: var(--text-primary-color);
+}
+
+figcaption {
+  margin-top: 1em;
+  font-size: 0.875em;
+  line-height: 1.3em;
+  color: var(--text-secondary-color);
+}
+
+.case-study-intro h1 {
+	text-align: center;
+	margin: 64px 0;
+}
+
+.property p {
+	font-size: 0.875em;
+	margin: 0 0 16px 0;
 }
 
 /* =================================
   #Links
 ==================================== */
-
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a:visited {
-	color: inherit;
+  color: inherit;
 }
 
 .nav a {
@@ -159,27 +209,27 @@ a:visited {
 
 .nav a:hover {
   color: var(--primary-color);
-	transition: .2s;
+  transition: .2s;
 }
 
 p a:link {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 p a:hover {
-	border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .project:hover .project-description {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .project img {
-	transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
 }
 
 .project:hover img {
-	transform: scale(1.04);
+  transform: scale(1.04);
 }
 
 /* =================================
@@ -188,13 +238,20 @@ p a:hover {
 .page-wrapper {
   width: 90%;
   margin: auto;
-	max-width: 600px;
+  max-width: 600px;
+}
+
+hr {
+  /* Used as a spacer */
+  margin: 30px 0 30px;
+  border: 1px solid rgba(255, 0, 0, 0);
 }
 
 img {
   max-width: 100%;
-	max-height: 100%;
-	display: block; */
+  max-height: 100%;
+  display: block;
+  */
 }
 
 #homepage-intro {
@@ -202,20 +259,52 @@ img {
 }
 
 #work a {
-	display: block;
+  display: block;
 }
 
 .project {
-	/* display: flex;
+  /* display: flex;
 	flex-direction: column; */
-	margin-bottom: 64px;
-	overflow: hidden;
+  margin-bottom: 64px;
+  overflow: hidden;
 }
 
 .project-image {
-	overflow: hidden;
-	margin-bottom: 24px;
-	border: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Case study layout styles */
+section {
+  margin-top: 48px;
+}
+
+figure {
+  margin-bottom: 32px;
+  /* this one is specifically for images in case studies */
+}
+
+.case-study-intro {
+  border-bottom: 1px solid var(--foreground-color-02);
+	padding-bottom: 32px;
+}
+
+
+.property {
+  margin-bottom: 24px;
+}
+
+.callout {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 16px;
+  background-color: var(--foreground-color-01);
+  line-height: 1.5em;
+}
+
+.callout .icon {
+  margin-right: 8px;
 }
 
 /* =================================
@@ -237,7 +326,7 @@ img {
   color: var(--text-primary-color);
   font-size: 1.5em;
   font-weight: 700;
-	letter-spacing: -0.02em;
+  letter-spacing: -0.02em;
   text-decoration: none;
   display: block;
   align-self: center;
@@ -247,81 +336,81 @@ img {
 /* =================================
   #Footer
 ==================================== */
-
 footer {
-	margin-top: 128px;
-	margin-bottom: 48px;
-	padding-top: 64px;
-	border-top: 1px solid var(--foreground-color);
-	text-align: center;
+  margin-top: 128px;
+  margin-bottom: 48px;
+  padding-top: 64px;
+  border-top: 1px solid var(--foreground-color-02);
+  text-align: center;
 }
 
 footer .nav {
-	margin-top: 48px;
+  margin-top: 48px;
 }
 
 /* =================================
   Media Queries
 ==================================== */
-
 @media (min-width: 769px) {
 
-/* Layout adjustments */
+  /* Layout adjustments */
+  .page-wrapper {
+    max-width: 980px;
+  }
 
-.page-wrapper {
-	max-width: 980px;
-}
+  .main-header {
+    flex-direction: row;
+    margin-top: 1em;
+  }
 
-.main-header {
-  flex-direction: row;
-	margin-top: 1em;
-}
+  .site-name {
+    margin-right: auto;
+  }
 
-.site-name {
-  margin-right: auto;
-}
+  .nav {
+    margin-top: 0;
+    align-self: center;
+  }
 
-.nav {
-  margin-top: 0;
-  align-self: center;
-}
+  .nav li {
+    margin-left: 3em;
+  }
 
-.nav li {
-  margin-left: 3em;
-}
+  #homepage-intro {
+    max-width: 600px;
+    margin: 256px 0;
+  }
 
-#homepage-intro {
-	max-width: 600px;
-	margin: 256px 0;
-}
+  .project-image {
+    width: 60%;
+    float: right;
+    margin-left: 32px;
+    margin-bottom: 0;
+  }
 
-.project-image {
-	width: 60%;
-	float: right;
-	margin-left: 32px;
-	margin-bottom: 0;
-}
+  /* Styling adjustments */
+  .hero {
+    font-size: 6em;
+  }
 
-/* Styling adjustments */
+  h1 {
+    font-size: 3em;
+  }
 
-h1 {
-	font-size: 6em;
-}
+  h2 {
+    font-size: 2em;
+  }
 
-h2 {
-	font-size: 3em;
-}
+  h3 {
+    font-size: 1.5em;
+  }
 
-h3 {
-	font-size: 2em;
-}
+  p {
+    font-size: 1.125em;
+    line-height: 1.7;
+  }
 
-p {
-	font-size: 1.125em;
-}
-
-footer {
-	margin-top: 256px;
-}
-
+  footer {
+    margin-top: 256px;
+  }
 }
