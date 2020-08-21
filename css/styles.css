@@ -73,7 +73,7 @@ table {
   :root {
     --primary-color: #9797FF;
     --text-primary-color: #F0F0F0;
-    --text-secondary-color: rgba(240, 240, 240, 0.6);
+    --text-secondary-color: rgba(240, 240, 240, 0.8);
     --text-tertiary-color: rgba(240, 240, 240, 0.6);
     --foreground-color-02: #2E2E2E;
     --foreground-color-01: #1F1F1F;
@@ -180,9 +180,14 @@ figcaption {
   color: var(--text-secondary-color);
 }
 
-.case-study-intro h1 {
+/* .case-study-intro h1 {
 	text-align: center;
 	margin: 64px 0;
+} */
+
+.case-study-title {
+  text-align: center;
+  margin: 64px 0;
 }
 
 .property {
@@ -197,37 +202,31 @@ figcaption {
 /* =================================
   #Links
 ==================================== */
-a {
+a, a:visited {
   text-decoration: none;
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--text-primary-color);
 }
 
-a:visited {
-	color: inherit;
+a:hover {
+  color: var(--primary-color);
 }
 
 .nav a {
   font-weight: 500;
-  color: var(--text-tertiary-color);
+  color: var(--text-secondary-color);
   text-decoration: none;
+  border-bottom: none;
 }
 
 .nav a:hover {
   color: var(--primary-color);
-  transition: .2s;
 }
 
-p a:link, .constrain a:visited {
-	border-bottom: 1px solid var(--primary-color);
-}
-/* Any link that is within the main text area of a case study but not including those on home page */
-
-p a:hover {
-  color: var(--primary-color);
+.project a {
+  border-bottom: none;
 }
 
-.project:hover .project-description {
-  color: var(--primary-color);
-}
 
 .project img {
   transition: transform .2s ease-in-out;
@@ -246,6 +245,10 @@ p a:hover {
   max-width: 600px;
 }
 
+.main-header {
+  margin-bottom: 32px;
+}
+
 hr {
   /* Used as a spacer */
   margin: 30px 0 30px;
@@ -261,6 +264,10 @@ img {
 
 #homepage-intro {
   margin: 128px 0;
+}
+
+#work {
+  padding-top: 64px;
 }
 
 #work a {
