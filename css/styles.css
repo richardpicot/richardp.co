@@ -53,20 +53,36 @@ table {
   #Basic Styles
 ==================================== */
 
-body {
-	background: #fff;
-	font-family: 'Work Sans', sans-serif;
-  font-size: 16px;
-	color: #232238;
-	-webkit-font-smoothing: antialiased;
+/* Light mode variables */
+:root {
+	--primary-color: #5758FF;
+	--text-primary-color: #333333;
+	--text-secondary-color: rgba(60,60,67,0.6);
+	--text-tertiary-color: rgba(119,119,119,0.4);
+	--foreground-color: #E5E5EA;
+	--main-background-color: #ffffff;
 }
 
-/* @media (prefers-color-scheme: dark) {
-	body {
-		background-color: #000;
-		color: #fff;
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+		--primary-color: #9797FF;
+		--text-primary-color: #F0F0F0;
+		--text-secondary-color: rgba(240,240,240,0.6);
+		--text-tertiary-color: rgba(240,240,240,0.4);
+		--foreground-color: #2E2E2E;
+		--main-background-color: #121212;
 	}
-} */
+}
+
+
+body {
+	background: var(--main-background-color);
+	font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+	color: var(--text-primary-color);
+	-webkit-font-smoothing: antialiased;
+}
 
 /* =================================
   #Typography
@@ -102,26 +118,10 @@ h4 {
 	margin-bottom: 16px;
 }
 
-h5 {
-	font-size: 1em;
-	font-weight: 800;
-	line-height: 1.5;
-	margin-bottom: 16px;
-}
-
-h6 {
-	font-size: 1em;
-	font-weight: 800;
-	line-height: 1.5;
-	margin-bottom: 16px;
-}
-
 p {
 	margin-bottom: 1em;
 	font-size: 1em;
 	line-height: 1.7;
-	/* font-family: -apple-system; */
-	color: #2F2E41;
 }
 
 em {
@@ -136,7 +136,7 @@ strong {
 	font-size: 1.5em;
 	font-weight: 700;
 	line-height: 1.3em;
-	margin-bottom: 2em;
+	margin-bottom: 32px;
 }
 
 .subtitle {
@@ -157,25 +157,25 @@ a:visited {
 
 .nav a {
   font-weight: 500;
-  color: #8E8E93;
+  color: var(--text-secondary-color);
   text-decoration: none;
 }
 
 .nav a:hover {
-  color: #4235f2;
+  color: var(--primary-color);
 	transition: .2s;
 }
 
 p a:link {
-	color: #4235f2;
+	color: var(--primary-color);
 }
 
 p a:hover {
-	border-bottom: 1px solid #4235f2;
+	border-bottom: 1px solid var(--primary-color);
 }
 
 .project:hover .project-description {
-	color: #4235f2;
+	color: var(--primary-color);
 }
 
 .project img {
@@ -238,7 +238,7 @@ img {
 }
 
 .site-name {
-  color: #0D0D1E;
+  color: var(--text-primary-color);
   font-size: 1.5em;
   font-weight: 700;
 	letter-spacing: -0.02em;
@@ -256,7 +256,7 @@ footer {
 	margin-top: 128px;
 	margin-bottom: 48px;
 	padding-top: 64px;
-	border-top: 1px solid #E5E5EA;
+	border-top: 1px solid var(--foreground-color);
 	text-align: center;
 }
 
@@ -307,6 +307,11 @@ footer .nav {
 }
 
 /* Styling adjustments */
+
+h1 {
+	font-size: 6em;
+}
+
 h2 {
 	font-size: 3em;
 }
