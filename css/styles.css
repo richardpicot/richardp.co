@@ -98,7 +98,7 @@ h1, h2, h3 {
 }
 
 .hero {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -176,7 +176,7 @@ li span {
 figcaption {
   margin-top: 1em;
   font-size: 0.875em;
-  line-height: 1.3em;
+  line-height: 1.4em;
   color: var(--text-secondary-color);
 }
 
@@ -470,6 +470,10 @@ footer .nav {
 
 blockquote {
 	font-size: 2em;
+}
+
+figcaption {
+  text-align: center;
 }
 
   footer {
