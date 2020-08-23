@@ -298,12 +298,12 @@ figure, video {
 }
 
 /* Ensure YouTube embeds are full width */
-.embed {
+/* .embed {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
-}
+} */
 .video {
     position: absolute;
     top: 0;
