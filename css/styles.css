@@ -124,7 +124,7 @@ h3 {
 }
 
 p {
-  margin: 0 0 32px 0;
+  margin: 0 0 16px 0;
   font-size: 1em;
   line-height: 1.5;
 }
@@ -219,6 +219,7 @@ a:hover {
 
 .nav a:hover {
   color: var(--primary-color);
+  font-weight: 500;
 }
 
 .project a {
@@ -283,6 +284,13 @@ img, video {
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 /* ------- CASE STUDY LAYOUT STYLES -------- */
 section {
   margin-top: 48px;
@@ -321,6 +329,29 @@ figure, video {
 .callout .icon {
   margin-right: 8px;
 }
+
+/* ------- ABOUT ME LAYOUT STYLES -------- */
+
+.about-header {
+  max-width: 600px;
+  margin-top: 96px;
+}
+.photo-of-me {
+  width: 192px;
+}
+
+.about-me figure {
+  display: block;
+  width: 300px;
+}
+
+.design-process {
+  width: 350px;
+}
+
+.right-column {
+  margin-top: 48px;
+} /* On mobile add a little space between sections */
 
 /* =================================
   #Navigation
@@ -433,11 +464,23 @@ footer .nav {
     margin: auto;
   }
 
-.about-me figure {
-  margin-right: 32px;
-  width: 40%;
-  float: left;
+  /* ABOUT ME */
+.about-header {
+  margin-top: 256px;
 }
+
+  .about-me {
+    display: flex;
+  }
+
+  .about-left-column {
+    margin-right: 64px;
+    width: 1100px;
+  }
+
+  .right-column {
+    margin-top: 0px;
+  } /* On desktop remove the top margin */
 
   /* ------- Styling adjustments -------- */
   .hero {
