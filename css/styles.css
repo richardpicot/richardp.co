@@ -83,7 +83,7 @@ table {
 
 body {
   background: var(--main-background-color);
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", -apple-system, ".SFNSText-Regular", "San Francisco", Roboto, "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 16px;
   color: var(--text-primary-color);
   -webkit-font-smoothing: antialiased;
@@ -92,9 +92,9 @@ body {
 /* =================================
   #Typography
 ==================================== */
-h1, h2, h3 {
+h1, h2 {
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .hero {
@@ -121,10 +121,12 @@ h3 {
   font-size: 1.125em;
   font-weight: 700;
   line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 p {
-  margin: 0 0 16px 0;
+  margin: 0 0 32px 0;
   font-size: 1em;
   line-height: 1.5;
 }
@@ -140,7 +142,7 @@ strong {
 /* ------- CASE STUDY TYPOGRAPHY STYLES -------- */
 .pre-text {
   text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 0.875em;
   font-weight: 600;
   letter-spacing: 0.08em;
   margin-bottom: 8px;
@@ -179,10 +181,6 @@ figcaption {
   color: var(--text-secondary-color);
 }
 
-/* .case-study-intro h1 {
-	text-align: center;
-	margin: 64px 0;
-} */
 .case-study-title {
   text-align: center;
   margin: 64px 0;
@@ -211,7 +209,10 @@ a:hover {
 }
 
 .nav a {
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 0.875em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text-secondary-color);
   text-decoration: none;
   border-bottom: none;
@@ -219,7 +220,6 @@ a:hover {
 
 .nav a:hover {
   color: var(--primary-color);
-  font-weight: 500;
 }
 
 .project a {
@@ -272,16 +272,17 @@ img, video {
 }
 
 .project {
-  /* display: flex;
-	flex-direction: column; */
   margin-bottom: 64px;
   overflow: hidden;
+}
+
+.project-description h2 {
+  margin-bottom: 16px;
 }
 
 .project-image {
   overflow: hidden;
   margin-bottom: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .clearfix::after {
@@ -293,7 +294,7 @@ img, video {
 
 /* ------- CASE STUDY LAYOUT STYLES -------- */
 section {
-  margin-top: 48px;
+  margin-top: 64px;
 }
 
 figure, video {
@@ -328,6 +329,19 @@ figure, video {
 
 .callout .icon {
   margin-right: 8px;
+}
+
+.up-next {
+  margin-top: 96px;
+  margin-bottom: 64px;
+  padding-top: 64px;
+  border-top: solid 1px var(--foreground-color-02);
+}
+
+.up-next-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 /* ------- ABOUT ME LAYOUT STYLES -------- */
@@ -383,7 +397,7 @@ figure, video {
   #Footer
 ==================================== */
 footer {
-  margin-top: 128px;
+  margin-top: 64px;
   margin-bottom: 64px;
   padding-top: 64px;
   border-top: 1px solid var(--foreground-color-02);
@@ -434,6 +448,10 @@ footer .nav {
     margin-bottom: 0;
   }
 
+  .project-description h2 {
+    margin-bottom: 32px;
+  }
+
   /* CASE STUDY */
   .case-study-title {
     margin: 96px 0;
@@ -469,6 +487,10 @@ footer .nav {
   margin-top: 256px;
 }
 
+.photo-of-me {
+  width: 256px;
+}
+
   .about-me {
     display: flex;
   }
@@ -489,7 +511,7 @@ footer .nav {
 
 .project-description p::before {
   content: "";
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   display: block;
   width: 48px;
   height: 1px;
@@ -526,7 +548,7 @@ footer .nav {
   }
 
   footer {
-    margin: 200px 0 96px 0;
+    margin: 96px 0 96px 0;
     padding-top: 96px;
   }
 
