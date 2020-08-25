@@ -511,11 +511,15 @@ footer .nav {
 
 .project-description p::before {
   content: "";
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   display: block;
   width: 48px;
   height: 1px;
   background-color: var(--foreground-color-02);
+}
+
+.project-description h2 {
+  margin-bottom: 16px;
 }
 
   .project-description p {
