@@ -2,11 +2,13 @@
     "applinks": {
         "details": [
             {
-                "appIDs": "36P4XTQEHP.co.richardp.bottlecap",
-                "components": [{
-                "/": "/event/*",
-                "comment": "Matches any URL whose path starts with /event/"
-                }]
+                "appIDs": ["36P4XTQEHP.co.richardp.bottlecap"],
+                "components": [
+                    {
+                        "/": "/event/*",
+                        "comment": "Matches any URL whose path starts with /event/"
+                    }
+                ]
             }
         ]
     }
