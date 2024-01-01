@@ -2,7 +2,7 @@
     "applinks": {
         "details": [
             {
-                "appIDs": ["36P4XTQEHP.co.richardp.bottlecap"],
+                "appIDs": ["36P4XTQEHP.co.richardp.BottleCap"],
                 "components": [
                     {
                         "/": "/event/*",
